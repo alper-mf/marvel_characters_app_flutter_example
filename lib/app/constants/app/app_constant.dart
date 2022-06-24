@@ -1,21 +1,27 @@
-const String appName = 'BaseProject';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
-const String appleMarketUrl = 'https://www.apple.com/tr/app-store/';
+class AppConstants {
+  AppConstants._();
+  static const String appName = 'Marvel Characters';
 
-const String googleMarketUrl = 'https://play.google.com/store/apps/details?id=com.google.android.googlequicksearchbox&gl=TR';
+  ///Marvel API -> Private KEY
+  final privateKey = dotenv.env['privateKey'];
 
-/// Türk Para Birimi
-const String priceUnit = '₺';
+  ///Marvel API -> Public KEY
+  final publicKey = dotenv.env['publicKey'];
 
-/// Dakika
-const String minuteUnite = 'dk';
+  /// Türk Para Birimi
+  static const String priceUnit = '₺';
 
-/// Tasarım Genişlik
-const double designWith = 375;
+  /// Dakika
+  static const String minuteUnite = 'dk';
 
-/// Tasarım Yükseklik
-const double designHeight = 811;
+  /// Tasarım Genişlik
+  static const double designWith = 375;
 
-/// Animasyonlarin Duration Süresi
-const int animationDurationMS = 400;
+  /// Tasarım Yükseklik
+  static const double designHeight = 811;
 
+  /// Animasyonlarin Duration Süresi
+  static const int animationDurationMS = 400;
+}

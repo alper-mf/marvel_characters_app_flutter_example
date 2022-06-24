@@ -1,9 +1,9 @@
 import 'dart:async';
+import 'package:dop_flutter_base_project/app/constants/app/app_constant.dart';
+import 'package:dop_flutter_base_project/core/services/initialize_service.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'app/constants/app/http_url.dart';
-import 'app/constants/app/app_constant.dart' as cons;
-import 'app/libs/locale_manager/locale_manager.dart';
 import 'app/model/config/environment_config_model.dart';
 import 'app/navigation/screens.dart';
 import 'app/navigation/size_config.dart';
@@ -16,7 +16,7 @@ import 'core/i10n/i10n.dart';
 /// Tüm proje ortamları bu run Fon. nunu çağırmakta
 Future run(EnvironmentConfigModel config) async {
   WidgetsFlutterBinding.ensureInitialized();
-  await LocaleManager.cacheInit();
+  await InitServices().dependencies();
   HttpUrl.baseUrl = config.apiBaseUrl;
   debugPrint('HttpUrl.baseUrl: ' + HttpUrl.baseUrl);
   runApp(MyApp(appName: config.appName));
@@ -51,7 +51,7 @@ class MyApp extends StatelessWidget {
                   child: child!,
                 );
               },
-              title: appName ?? cons.appName,
+              title: appName ?? AppConstants.appName,
               debugShowCheckedModeBanner: false,
               themeMode: ThemeMode.light,
               theme: getTheme(AppLightTheme()),

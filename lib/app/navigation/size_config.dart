@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 /// Ekran boyutlarını tutmak için yazıldı
 class SizeConfig {
   static late MediaQueryData _mediaQueryData;
-  static late double screenWidth;
-  static late double screenHeight;
+  static late double width;
+  static late double height;
   static late double blockSizeHorizontal;
   static late double blockSizeVertical;
   static late double _safeAreaHorizontal;
@@ -19,14 +19,14 @@ class SizeConfig {
 
   static void init(BuildContext context) {
     _mediaQueryData = MediaQuery.of(context);
-    screenWidth = _mediaQueryData.size.width;
-    screenHeight = _mediaQueryData.size.height;
-    blockSizeHorizontal = screenWidth / 100;
-    blockSizeVertical = screenHeight / 100;
+    width = _mediaQueryData.size.width;
+    height = _mediaQueryData.size.height;
+    blockSizeHorizontal = width / 100;
+    blockSizeVertical = height / 100;
     _safeAreaHorizontal = _mediaQueryData.padding.left + _mediaQueryData.padding.right;
     _safeAreaVertical = _mediaQueryData.padding.top + _mediaQueryData.padding.bottom;
-    safeBlockHorizontal = (screenWidth - _safeAreaHorizontal) / 100;
-    safeBlockVertical = (screenHeight - _safeAreaVertical) / 100;
+    safeBlockHorizontal = (width - _safeAreaHorizontal) / 100;
+    safeBlockVertical = (height - _safeAreaVertical) / 100;
     safeAreaPadding = _mediaQueryData.padding;
 
     /// The number of device pixels for each logical pixel. This number might not
@@ -35,12 +35,12 @@ class SizeConfig {
     if (_mediaQueryData.padding.top != 0) {
       statusBarHeight = _mediaQueryData.padding.top;
     }
-    log('${screenWidth * devicePixelRatio}x${screenHeight * devicePixelRatio}', name: 'Screen pixel');
+    log('${width * devicePixelRatio}x${height * devicePixelRatio}', name: 'Screen pixel');
   }
 
   void setScreenSizeFromConstraints(BoxConstraints constraints) {
-    SizeConfig.screenWidth = constraints.maxWidth;
-    SizeConfig.screenHeight = constraints.maxHeight;
-    log('${SizeConfig.screenWidth}x${SizeConfig.screenHeight}', name: 'Screen local pixel');
+    SizeConfig.width = constraints.maxWidth;
+    SizeConfig.height = constraints.maxHeight;
+    log('${SizeConfig.width}x${SizeConfig.height}', name: 'Screen local pixel');
   }
 }

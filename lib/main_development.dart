@@ -1,3 +1,5 @@
+import 'package:dop_flutter_base_project/app/constants/app/http_url.dart';
+
 import 'app/constants/app/app_constant.dart';
 import 'app.dart';
 import 'app/constants/enum/general_enum.dart';
@@ -11,9 +13,9 @@ import 'app/model/config/environment_config_model.dart';
 void main() {
   run(
     EnvironmentConfigModel(
-      appName: appName + AppEnvironment.Development.name,
+      appName: AppConstants.appName + AppEnvironment.Development.name,
       environment: AppEnvironment.Development,
-      apiBaseUrl: 'sandbox2.siparisimapi.com/development',
+      apiBaseUrl: HttpUrl.developmentBaseUrl,
     ),
   );
 }

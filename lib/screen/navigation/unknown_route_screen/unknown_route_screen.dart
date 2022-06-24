@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../../../app/theme/text_style.dart';
 import '../../../app/components/app_bar/app_bar.dart';
-import '../../../app/constants/app/padding_and_radius_size.dart';
+import '../../../app/constants/app/padding_and_radius.dart';
 import '../../../core/i10n/i10n.dart';
 
 /// Gidilmek istenilen ekran tanımlı değil ise Gösterilen ekran

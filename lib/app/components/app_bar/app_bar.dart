@@ -1,6 +1,6 @@
 import 'package:dop_flutter_base_project/app/extensions/widget_extension.dart';
 import 'package:flutter/material.dart';
-import '../../constants/app/padding_and_radius_size.dart';
+import '../../constants/app/padding_and_radius.dart';
 import '../../navigation/size_config.dart';
 
 ///

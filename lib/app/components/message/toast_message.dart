@@ -2,7 +2,7 @@ import 'package:dop_flutter_base_project/app/extensions/widgets_scale_extension.
 import 'package:flutter/material.dart';
 import 'package:flutter_styled_toast/flutter_styled_toast.dart';
 import 'package:flutter_svg/svg.dart';
-import '../../constants/app/padding_and_radius_size.dart';
+import '../../constants/app/padding_and_radius.dart';
 import '../../constants/asset/assets.dart';
 import '../../theme/colors.dart';
 import '../../theme/text_style.dart';
@@ -10,7 +10,8 @@ import '../../theme/text_style.dart';
 /// [widget] Toast mesaj da gösterilen custom widget eğer null ise default widget gösterilecektir
 /// [duration] Toast mesajı SN cinsinden gösterme süresi eğer null ise 3 Sn olarak devam edecek
 /// [textMessage] eğer [widget] null olupta bu Text metini default Toast message'nde gösterilecektir
-ToastFuture showToastMessage(BuildContext context, {Widget? widget, int? duration, String? textMessage}) {
+ToastFuture showToastMessage(BuildContext context,
+    {Widget? widget, int? duration, String? textMessage}) {
   if (widget == null && textMessage == null) {
     throw "Toast Message de widget ve textMassage parametreleri ikisi birden null olamaz.\n"
         "if(widget == null && textMessage == null) Doğru değil.";
@@ -46,7 +47,8 @@ ToastFuture showToastMessage(BuildContext context, {Widget? widget, int? duratio
   }
 }
 
-ToastFuture showDoneToastMessage(BuildContext context, {int? duration, required String textMessage}) {
+ToastFuture showDoneToastMessage(BuildContext context,
+    {int? duration, required String textMessage}) {
   return showToastMessage(
     context,
     duration: duration,

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../constants/app/padding_and_radius_size.dart';
+import '../constants/app/padding_and_radius.dart';
 import '../constants/asset/assets.dart';
 import '../extensions/widgets_scale_extension.dart';
 import '../theme/colors.dart';

@@ -1,4 +1,4 @@
-# dop_flutter_base_project
+# Marvel Comics Heroes App
 
 Flutter Base Project.
 

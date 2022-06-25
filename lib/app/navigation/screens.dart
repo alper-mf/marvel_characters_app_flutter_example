@@ -1,7 +1,8 @@
 import 'dart:developer';
+import 'package:dop_flutter_base_project/screen/home_screen/home_screen.dart';
 import 'package:get/get.dart';
 import 'package:flutter/cupertino.dart';
-import '../../screen/auth/register_screen/register_screen.dart';
+
 import '../../screen/landing/splash_screen/splash_screen.dart';
 import 'page_navigation.dart';
 
@@ -29,13 +30,13 @@ class Screens with PageNavigation {
 
 class _MainScreens with PageNavigation {
   final String init = '/';
-  final String registerScreen = _getMainScreenName('registerScreen');
+  final String homeScreen = _getMainScreenName('homeScreen');
 
   Route<dynamic>? onGenerateRoute(RouteSettings setting) {
     if (setting.name == init) {
       return goToPage(const SplashScreen(), setting);
-    } else if (setting.name == registerScreen) {
-      return goToPage(RegisterScreen(), setting);
+    } else if (setting.name == homeScreen) {
+      return goToPage(HomeScreen(), setting);
     } else {
       return returnUnknownPageRoute(setting);
     }

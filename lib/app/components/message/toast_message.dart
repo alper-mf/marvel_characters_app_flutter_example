@@ -1,9 +1,8 @@
 import 'package:dop_flutter_base_project/app/extensions/widgets_scale_extension.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_styled_toast/flutter_styled_toast.dart';
-import 'package:flutter_svg/svg.dart';
 import '../../constants/app/padding_and_radius.dart';
-import '../../constants/asset/assets.dart';
+
 import '../../theme/colors.dart';
 import '../../theme/text_style.dart';
 
@@ -71,10 +70,10 @@ ToastFuture showDoneToastMessage(BuildContext context,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              SvgPicture.asset(
-                doneIcon,
-                width: 16.horizontalScale,
-              ),
+              // SvgPicture.asset(
+              //   doneIcon,
+              //   width: 16.horizontalScale,
+              // ),
               const SizedBox(width: paddingM),
               Flexible(
                   child: Text(

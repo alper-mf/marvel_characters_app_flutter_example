@@ -1,7 +1,8 @@
+import 'package:dop_flutter_base_project/screen/home_screen/view_model/home_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'controller/home_controller.dart';
-import 'view/home.dart';
+
+import 'view/home_view.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -9,8 +10,8 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetBuilder(
-      init: HomeController(),
-      builder: (_) => const Home(),
+      init: HomeViewModel(),
+      builder: (_) => const HomeView(),
     );
   }
 }

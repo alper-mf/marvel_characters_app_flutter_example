@@ -1,13 +1,12 @@
+import 'package:dop_flutter_base_project/screen/home_screen/view_model/home_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../controller/home_controller.dart';
-  
-class Home extends StatelessWidget {
-  const Home({Key? key}) : super(key: key);
+
+class HomeView extends GetView<HomeViewModel> {
+  const HomeView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    final controller = Get.find<HomeController>();
     return Scaffold(
       key: controller.scaffoldKey,
       appBar: AppBar(),

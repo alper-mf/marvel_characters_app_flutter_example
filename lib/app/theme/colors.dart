@@ -16,8 +16,9 @@ class AppColor {
   static const Color errorColor = Colors.red;
   static const Color slidableRedColor = Color(0xFFBE5555);
   static const Color darkBlue = Color(0xFF27356F);
-  static Color turkcellYellow = const Color(0xffffc72c).withOpacity(0.95);
+  static Color yellow = const Color(0xffffc72c).withOpacity(0.95);
   static Color lightWhite = const Color(0xffefefef).withOpacity(0.8);
   static Color cardBarrierColor = const Color(0xff464250).withOpacity(0.7);
   static Color lightGreenColor = const Color(0xffEBF4EC);
+  static Color disabledButtonColor = Color.fromARGB(255, 81, 81, 81);
 }

@@ -1,6 +1,7 @@
+import 'package:dop_flutter_base_project/app/constants/app/app_constant.dart';
 import 'package:flutter/material.dart';
 import '../constants/app/padding_and_radius.dart';
-import '../constants/asset/assets.dart';
+
 import '../extensions/widgets_scale_extension.dart';
 import '../theme/colors.dart';
 
@@ -33,7 +34,7 @@ class AppLightTheme implements AppTheme {
     primary: AppColor.primary,
     onPrimary: Colors.white,
     primaryContainer: AppColor.primaryContainer,
-    secondary: AppColor.turkcellYellow,
+    secondary: AppColor.yellow,
     onSecondary: AppColor.darkText,
     secondaryContainer: AppColor.darkText,
     surface: Colors.white,
@@ -77,37 +78,37 @@ class AppLightTheme implements AppTheme {
       fontSize: 12.horizontalScale,
       fontWeight: FontWeight.w400,
       color: AppColor.darkText,
-      fontFamily: fontFamily,
+      fontFamily: AppConstants.fontFamily,
     ),
     headline2: TextStyle(
       fontSize: 13.horizontalScale,
       fontWeight: FontWeight.w400,
       color: AppColor.darkText,
-      fontFamily: fontFamily,
+      fontFamily: AppConstants.fontFamily,
     ),
     headline3: TextStyle(
       fontSize: 18.horizontalScale,
       fontWeight: FontWeight.w400,
       color: AppColor.darkText,
-      fontFamily: fontFamily,
+      fontFamily: AppConstants.fontFamily,
     ),
     headline4: TextStyle(
       fontSize: 15.horizontalScale,
       fontWeight: FontWeight.w400,
       color: AppColor.darkText,
-      fontFamily: fontFamily,
+      fontFamily: AppConstants.fontFamily,
     ),
     headline5: TextStyle(
       fontSize: 20.horizontalScale,
       fontWeight: FontWeight.w400,
       color: AppColor.darkText,
-      fontFamily: fontFamily,
+      fontFamily: AppConstants.fontFamily,
     ),
     headline6: TextStyle(
       fontSize: 26.horizontalScale,
       fontWeight: FontWeight.w400,
       color: AppColor.darkText,
-      fontFamily: fontFamily,
+      fontFamily: AppConstants.fontFamily,
     ),
 
     ///BodyText
@@ -115,31 +116,31 @@ class AppLightTheme implements AppTheme {
       fontSize: 16.horizontalScale,
       fontWeight: FontWeight.w400,
       color: AppColor.darkText,
-      fontFamily: fontFamily,
+      fontFamily: AppConstants.fontFamily,
     ),
     bodyText2: TextStyle(
       fontSize: 10.horizontalScale,
       fontWeight: FontWeight.w400,
       color: AppColor.darkText,
-      fontFamily: fontFamily,
+      fontFamily: AppConstants.fontFamily,
     ),
     subtitle1: TextStyle(
       fontSize: 14.horizontalScale,
       fontWeight: FontWeight.w500,
       color: AppColor.darkText,
-      fontFamily: fontFamily,
+      fontFamily: AppConstants.fontFamily,
     ),
     subtitle2: TextStyle(
       fontSize: 8.horizontalScale,
       fontWeight: FontWeight.w400,
       color: AppColor.darkText,
-      fontFamily: fontFamily,
+      fontFamily: AppConstants.fontFamily,
     ),
     caption: TextStyle(
       fontSize: 11.horizontalScale,
       fontWeight: FontWeight.w400,
       color: AppColor.darkText,
-      fontFamily: fontFamily,
+      fontFamily: AppConstants.fontFamily,
     ),
   );
 
@@ -151,7 +152,7 @@ class AppLightTheme implements AppTheme {
       textStyle: MaterialStateProperty.all<TextStyle>(
         TextStyle(
           color: Colors.white,
-          fontFamily: fontFamily,
+          fontFamily: AppConstants.fontFamily,
           fontWeight: FontWeight.w400,
           fontSize: 16.horizontalScale,
         ),
@@ -172,11 +173,11 @@ class AppLightTheme implements AppTheme {
       fontSize: 14.horizontalScale,
       fontWeight: FontWeight.w400,
       color: AppColor.darkText,
-      fontFamily: fontFamily,
+      fontFamily: AppConstants.fontFamily,
     ),
     hintStyle: TextStyle(
       fontWeight: FontWeight.w400,
-      fontFamily: fontFamily,
+      fontFamily: AppConstants.fontFamily,
       color: AppColor.paleTextColor,
       fontSize: 14.horizontalScale,
     ),
@@ -229,7 +230,7 @@ class AppLightTheme implements AppTheme {
       textStyle: MaterialStateProperty.all<TextStyle>(
         TextStyle(
           color: AppColor.primary,
-          fontFamily: fontFamily,
+          fontFamily: AppConstants.fontFamily,
           fontWeight: FontWeight.w400,
           fontSize: 16.horizontalScale,
         ),
@@ -246,7 +247,7 @@ class AppLightTheme implements AppTheme {
       textStyle: MaterialStateProperty.all<TextStyle>(
         TextStyle(
           color: AppColor.darkText,
-          fontFamily: fontFamily,
+          fontFamily: AppConstants.fontFamily,
           fontWeight: FontWeight.w400,
           fontSize: 16.horizontalScale,
         ),
@@ -289,7 +290,7 @@ class AppLightTheme implements AppTheme {
       fontSize: 16.horizontalScale,
       fontWeight: FontWeight.w700,
       color: Colors.white,
-      fontFamily: fontFamily,
+      fontFamily: AppConstants.fontFamily,
     ),
     centerTitle: true,
     actionsIconTheme: const IconThemeData(color: Colors.white),
@@ -303,14 +304,14 @@ class AppLightTheme implements AppTheme {
       fontSize: 14.horizontalScale,
       fontWeight: FontWeight.w700,
       color: AppColor.primary,
-      fontFamily: fontFamily,
+      fontFamily: AppConstants.fontFamily,
     ),
     unselectedLabelColor: AppColor.darkText,
     unselectedLabelStyle: TextStyle(
       fontSize: 14.horizontalScale,
       fontWeight: FontWeight.w700,
       color: AppColor.darkText,
-      fontFamily: fontFamily,
+      fontFamily: AppConstants.fontFamily,
     ),
   );
 

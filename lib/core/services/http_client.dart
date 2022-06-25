@@ -99,11 +99,13 @@ class HttpClient extends IHttpClient {
   }
 
   void _logS(String url, Map<String, String>? header, String responseBody, String requestBody) {
-    log('_______________________________ Http Start ________________________________', name: 'Http');
+    log('_______________________________ Http Start ________________________________',
+        name: 'Http');
     log('Api Request Url: ' + url, name: 'Http');
     log('Header: ' + jsonEncode(header), name: 'Http');
     log('Request: ' + requestBody, name: 'Http');
     log('Rsponse: ' + responseBody, name: 'Http');
-    log('________________________________ Http End _________________________________', name: 'Http');
+    log('________________________________ Http End _________________________________',
+        name: 'Http');
   }
 }

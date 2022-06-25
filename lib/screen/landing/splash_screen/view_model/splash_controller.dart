@@ -4,10 +4,9 @@ import 'package:dop_flutter_base_project/app/navigation/screens.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import '../../../../app/controllers/general/session_service.dart';
 import '../../../../core/i10n/i10n.dart';
 
-class SplashController extends GetxController {
+class SplashViewModel extends GetxController {
   final GlobalKey scaffoldKey = GlobalKey();
 
   @override
@@ -25,7 +24,6 @@ class SplashController extends GetxController {
   Future<void> _init() async {
     final context = scaffoldKey.currentContext!;
     final future = Future.delayed(const Duration(seconds: 2));
-    final sessionService = Get.find<SessionService>();
 
     /// Internet kontrol
     if (!await checkInternet()) return;
@@ -33,7 +31,7 @@ class SplashController extends GetxController {
     try {
       future.whenComplete(
         () => Navigator.pushNamedAndRemoveUntil(
-            context, Screens.instance.main.registerScreen, (route) => false),
+            context, Screens.instance.main.welcomeScreen, (route) => false),
       );
     } catch (e) {
       debugPrint(e.toString());

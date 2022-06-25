@@ -23,4 +23,6 @@ class AppConstants {
 
   ///Font Family = SourceSansPro
   static const String fontFamily = 'SourceSansPro';
+
+  static const int loadMoreLenght = 30;
 }

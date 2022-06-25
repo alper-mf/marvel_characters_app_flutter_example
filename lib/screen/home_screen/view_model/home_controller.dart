@@ -3,6 +3,7 @@ import 'package:dop_flutter_base_project/app/components/dialog/info_dialog.dart'
 import 'package:dop_flutter_base_project/app/components/dialog/loading_progress.dart';
 import 'package:dop_flutter_base_project/app/components/dialog/my_simple_dialog.dart';
 import 'package:dop_flutter_base_project/app/components/message/toast_message.dart';
+import 'package:dop_flutter_base_project/app/constants/app/app_constant.dart';
 import 'package:dop_flutter_base_project/app/constants/enum/loading_status_enum.dart';
 import 'package:dop_flutter_base_project/app/model/response/characters_response.dart';
 import 'package:dop_flutter_base_project/core/i10n/i10n.dart';
@@ -13,10 +14,15 @@ class HomeViewModel extends GetxController {
   final scaffoldKey = GlobalKey<ScaffoldState>();
   late Rx<CharactersResponseModel> _characterListModel;
   late Rx<LoadingStatus> _loadingStatus;
+  late ScrollController scrollController;
+  RxList<String> items = List.generate(10, (index) => 'Hello $index').obs;
+
+  final RxInt listCount = 0.obs;
 
   HomeViewModel() {
     _characterListModel = CharactersResponseModel().obs;
     _loadingStatus = LoadingStatus.init.obs;
+    scrollController = ScrollController()..addListener((() => _scrollListener()));
   }
 
   ///Genel Context için kullanılır.
@@ -59,10 +65,21 @@ class HomeViewModel extends GetxController {
     }
   }
 
+  ///Liste için kullanılan listener.
+  void _scrollListener() {
+    print(scrollController.position.extentAfter);
+    if (scrollController.position.pixels == scrollController.position.maxScrollExtent) {
+      items.addAll(List.generate(10, (index) => 'Inserted $index'));
+    }
+  }
+
   ///Karakter listesinin çekildiği method.
   Future<void> _getCharacterLists() async {
+    final param = {
+      "limit": listCount + AppConstants.loadMoreLenght,
+    };
     try {
-      final response = await ApiManager().getCharacterLists();
+      final response = await ApiManager().getCharacterLists(param);
       if (response.status == BaseModelStatus.ok) {
         characterResponseModel = response.data!;
         print('character List --> ' + characterResponseModel.toJson().toString());

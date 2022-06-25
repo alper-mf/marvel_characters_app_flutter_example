@@ -6,7 +6,7 @@ class HttpUrl {
   static const developmentBaseUrl = 'gateway.marvel.com';
 
   ///Product tarafında kullanılan baseURL.
-  static const productBaseUrl = 'gateway.marvel.com:443';
+  static const productBaseUrl = 'gateway.marvel.com';
 
   ///Stagging tarafında kullanılan baseURL.
   static const staggingBaseUrl = 'gateway.marvel.com';

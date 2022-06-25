@@ -6,7 +6,7 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import '../../../../core/i10n/i10n.dart';
 
-class SplashController extends GetxController {
+class SplashViewModel extends GetxController {
   final GlobalKey scaffoldKey = GlobalKey();
 
   @override
@@ -31,7 +31,7 @@ class SplashController extends GetxController {
     try {
       future.whenComplete(
         () => Navigator.pushNamedAndRemoveUntil(
-            context, Screens.instance.main.homeScreen, (route) => false),
+            context, Screens.instance.main.welcomeScreen, (route) => false),
       );
     } catch (e) {
       debugPrint(e.toString());

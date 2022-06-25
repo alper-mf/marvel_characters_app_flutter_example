@@ -18,15 +18,21 @@ class ApiManager extends SessionHeaderModel {
   ApiManager() : super(token: Get.find<SessionService>().getUserToken() ?? '');
 
   ///Marvel karakter listesini getirir.
-  Future<BaseHttpModel<CharactersResponseModel>> getCharacterLists() async {
+  Future<BaseHttpModel<CharactersResponseModel>> getCharacterLists(
+      Map<String, dynamic> param) async {
+    final Map<String, dynamic> defaultParams = {
+      "apikey": AppConstants().publicKey ?? '',
+      "hash": AppConstants().hash ?? '',
+      "ts": 1
+    };
+
+    if (param.isNotEmpty) {
+      defaultParams.addAll(param);
+    }
     try {
       var response = await HttpClient().request(HttpMethod.get, HttpUrl.characters,
           headerParam: createHeader(),
-          bodyParam: {
-            "apikey": AppConstants().publicKey ?? '',
-            "hash": AppConstants().hash ?? '',
-            "ts": 1
-          },
+          bodyParam: defaultParams,
           pathBody: HttpUrl()
               .pathBody(apiKey: AppConstants().publicKey ?? '', hash: AppConstants().hash ?? ''));
 

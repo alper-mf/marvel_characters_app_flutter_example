@@ -1,5 +1,6 @@
 import 'dart:developer';
 import 'package:dop_flutter_base_project/screen/home_screen/home_screen.dart';
+import 'package:dop_flutter_base_project/screen/landing/welcome_screen/welcome_screen.dart';
 import 'package:get/get.dart';
 import 'package:flutter/cupertino.dart';
 
@@ -30,11 +31,14 @@ class Screens with PageNavigation {
 
 class _MainScreens with PageNavigation {
   final String init = '/';
+  final String welcomeScreen = _getMainScreenName('welcomeScreen');
   final String homeScreen = _getMainScreenName('homeScreen');
 
   Route<dynamic>? onGenerateRoute(RouteSettings setting) {
     if (setting.name == init) {
       return goToPage(const SplashScreen(), setting);
+    } else if (setting.name == welcomeScreen) {
+      return goToPage(WelcomeScreen(), setting);
     } else if (setting.name == homeScreen) {
       return goToPage(HomeScreen(), setting);
     } else {

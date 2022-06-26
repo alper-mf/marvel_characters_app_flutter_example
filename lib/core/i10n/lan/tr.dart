@@ -16,7 +16,8 @@ class TrLocalization extends AppLocalizationLabel {
   @override
   final String noInternetErrorMessage = 'Lütfen internet bağlantınızı kontrol ediniz.';
   @override
-  final String serverErrorMessage = 'Sunucu kaynaklı bi hata oluştu. Lütfen daha sonra tekrar deneyiniz';
+  final String serverErrorMessage =
+      'Sunucu kaynaklı bi hata oluştu. Lütfen daha sonra tekrar deneyiniz';
   @override
   final String addToBasketBtnText = 'Sepete Ekle';
   @override
@@ -137,7 +138,8 @@ class TrLocalization extends AppLocalizationLabel {
   final String searchScreenBottomBarBtnText = 'Arama';
 
   @override
-  String campaignCountDescription(int campaignCount) => 'Ürünle ilgili $campaignCount adet kampanyayı gör';
+  String campaignCountDescription(int campaignCount) =>
+      'Ürünle ilgili $campaignCount adet kampanyayı gör';
 
   @override
   String discountTagHorizontalLeftTagText(int discount) => 'Sepette %' + discount.toString();
@@ -372,16 +374,19 @@ class TrLocalization extends AppLocalizationLabel {
   @override
   final String doYouWantToLogOutQuestionDialogText = 'Çıkış yapmak istediğinize emin misiniz?';
   @override
-  final String loginForAddProductToBasketDialogText = 'Sepete ürün ekleyebilmek için lütfen giriş yapınız.';
+  final String loginForAddProductToBasketDialogText =
+      'Sepete ürün ekleyebilmek için lütfen giriş yapınız.';
   @override
   final String deleteBasketForAddProductToBasketQuestionDialogText =
       'Sepetinizde başka restorendan ürün(ler) bulunmaktadır. Bu ürünü eklemek için sepetinizin silinmesini istermisiniz?';
   @override
   final String updateAppFromAppStoreDialogText = 'Lütfen uygulamayı apple marketten güncelleyiniz.';
   @override
-  final String updateAppFromGooglePlayDialogText = 'Lütfen uygulamayı google marketten güncelleyiniz.';
+  final String updateAppFromGooglePlayDialogText =
+      'Lütfen uygulamayı google marketten güncelleyiniz.';
   @override
-  final String loginForApplyCampaignDialogText = 'Bu kampanyayı uygulayabilmek için giriş yapmnız gerek.';
+  final String loginForApplyCampaignDialogText =
+      'Bu kampanyayı uygulayabilmek için giriş yapmnız gerek.';
   @override
   final String acceptTheTermsDialogText = 'Lütfen kullanım koşullarını kabul ediniz.';
   @override
@@ -400,7 +405,8 @@ class TrLocalization extends AppLocalizationLabel {
   @override
   final String loginForPaymentDialogText = 'Ödeme yapabilmek için giriş yapmanız gerek.';
   @override
-  final String noVehicleFoundForYourInfoDialogText = 'Girdiğiniz bilgilere uyan bir araç bulunamadı';
+  final String noVehicleFoundForYourInfoDialogText =
+      'Girdiğiniz bilgilere uyan bir araç bulunamadı';
   @override
   final String noVehicleFoundDialogText = 'Araç bulunamadı';
   @override
@@ -426,7 +432,8 @@ class TrLocalization extends AppLocalizationLabel {
   @override
   final String locationPermissionDeniedToastMessageText = 'Lokasyon izni red edildi';
   @override
-  final String locationPermissionCompletelyDeniedToastMessageText = 'Lokasyon izni tamamen kapatıldı';
+  final String locationPermissionCompletelyDeniedToastMessageText =
+      'Lokasyon izni tamamen kapatıldı';
   @override
   final String addedProductToBasketToastMessageText = 'Ürün sepete eklendi';
   @override
@@ -449,7 +456,8 @@ class TrLocalization extends AppLocalizationLabel {
   final String copiedToClipBoardToastMessageText = 'Panoya kopyalandi';
 
   @override
-  final String yourNameInTableHasBeenRegisteredToastMessageText = 'Masadaki adınız başarılı bi şekilde kayıtedildi.';
+  final String yourNameInTableHasBeenRegisteredToastMessageText =
+      'Masadaki adınız başarılı bi şekilde kayıtedildi.';
   @override
   final String pleaseRateToastMessageText = 'Lütfen değerlendirme yapınız.';
   @override
@@ -579,7 +587,8 @@ class TrLocalization extends AppLocalizationLabel {
   final String yourCartAddedToastMessageText = 'Kartınız güvenli bir şekilde eklenmiştir';
 
   @override
-  String underMinAmountDialogText(String difference) => 'Minimum sepet tutarının $difference TL Altındasınız.';
+  String underMinAmountDialogText(String difference) =>
+      'Minimum sepet tutarının $difference TL Altındasınız.';
   @override
   final String userProfileScreenAppBarText = 'Profilim';
 
@@ -879,4 +888,28 @@ class TrLocalization extends AppLocalizationLabel {
 
   @override
   final String connectWithYourAccountText = 'veya hesabınızla bağlanın';
+
+  @override
+  final String noComics = 'Çizgiroman bulunamadı.';
+
+  @override
+  final String enterTheEarth616 = 'Dünya 616\'ya Giriş Yap';
+
+  @override
+  final String withGreatPower = 'Büyük güç, büyük sorumluluk getirir.';
+  @override
+  final String characterDetail = 'Karakter Detayı';
+
+  @override
+  final String countLast2005comic =
+      'Bu karakterin 2005 yılından sonra sahip olduğu çizgi roman sayısı: ';
+
+  @override
+  final String description = 'Açıklama';
+
+  @override
+  final String last10ComicBooks = 'Son 10 Çizgi Roman';
+
+  @override
+  final String noDescription = 'Bu karakter için açıklama eklenmemiş.';
 }

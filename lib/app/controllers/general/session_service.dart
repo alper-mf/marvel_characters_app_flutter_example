@@ -6,6 +6,8 @@ class SessionService extends GetxController {
   final Rx<bool?> _loggedIn = Rx(null);
   String? _token;
 
+  int? _languageCode;
+
   String? getUserToken() {
     _token ??= LocaleManager.instance.getStringValue(CacheKey.token);
     return _token;
@@ -14,6 +16,16 @@ class SessionService extends GetxController {
   Future<void> setUserToken(String value) async {
     await LocaleManager.instance.setStringValue(CacheKey.token, value);
     _token = value;
+  }
+
+  int? getLanguageCode() {
+    _languageCode ??= LocaleManager.instance.getIntValue(CacheKey.languageCode);
+    return _languageCode;
+  }
+
+  Future<void> setLanguageCode(int value) async {
+    await LocaleManager.instance.setIntValue(CacheKey.languageCode, value);
+    _languageCode = value;
   }
 
   /// Kullanıcının authentice olup olmadığını local de kontrol eder auth ise true döner

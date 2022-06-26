@@ -637,6 +637,22 @@ abstract class AppLocalizationLabel {
 
   String get updateProfileScreenAppBarText;
 
+  String get withGreatPower;
+
+  String get enterTheEarth616;
+
+  String get noComics;
+
+  String get characterDetail;
+
+  String get description;
+
+  String get noDescription;
+
+  String get last10ComicBooks;
+
+  String get countLast2005comic;
+
   /// Code Country
   Map<String, String> get country;
 }

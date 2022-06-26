@@ -9,6 +9,7 @@ import 'package:dop_flutter_base_project/app/model/response/characters_response.
 import 'package:dop_flutter_base_project/app/navigation/size_config.dart';
 import 'package:dop_flutter_base_project/app/theme/colors.dart';
 import 'package:dop_flutter_base_project/app/theme/text_style.dart';
+import 'package:dop_flutter_base_project/core/i10n/i10n.dart';
 import 'package:dop_flutter_base_project/screen/home_screen/view_model/home_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';

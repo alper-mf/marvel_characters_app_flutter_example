@@ -80,10 +80,10 @@ class _Card extends StatelessWidget {
                     Expanded(
                       child: Text(
                         item.comics!.items == null
-                            ? 'No Comic Book'
+                            ? AppLocalization.getLabels.noComics
                             : item.comics!.items!.length > 0
                                 ? item.comics!.items![0].name!
-                                : 'No Comic Book',
+                                : AppLocalization.getLabels.noComics,
                         maxLines: 2,
                         overflow: TextOverflow.ellipsis,
                         style: s12W400Dark().copyWith(

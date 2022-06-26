@@ -7,6 +7,7 @@ import 'package:dop_flutter_base_project/app/model/response/characters_response.
 import 'package:dop_flutter_base_project/app/navigation/size_config.dart';
 import 'package:dop_flutter_base_project/app/theme/colors.dart';
 import 'package:dop_flutter_base_project/app/theme/text_style.dart';
+import 'package:dop_flutter_base_project/core/i10n/i10n.dart';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -79,7 +80,7 @@ class DetailView extends GetView<DetailViewModel> {
                       child: MyAppBar(
                         backgroundColor: AppColor.transparent,
                         titleWidget: Text(
-                          'Karakter Detayı',
+                          AppLocalization.getLabels.characterDetail,
                           style: s18W500Dark().copyWith(color: AppColor.white),
                         ),
                       ),
@@ -97,7 +98,7 @@ class DetailView extends GetView<DetailViewModel> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       KPadding(),
-                      Text('Description',
+                      Text(AppLocalization.getLabels.description,
                           style: s18W500Dark().copyWith(
                             color: AppColor.white,
                           )),
@@ -105,19 +106,19 @@ class DetailView extends GetView<DetailViewModel> {
                       Text(
                           item.description != null && item.description != ''
                               ? item.description!
-                              : 'No description',
+                              : AppLocalization.getLabels.noDescription,
                           style: s14W400Dark().copyWith(
                             color: AppColor.white,
                           )),
                       KPadding(size: .05),
-                      Text('Last 10 Comic Books',
+                      Text(AppLocalization.getLabels.last10ComicBooks,
                           style: s18W500Dark().copyWith(
                             color: AppColor.white,
                           )),
                       if (controller.comicBookListModel.data != null) ...[
                         KPadding(size: .01),
                         Text(
-                            'Bu karakterin 2005 yılından sonra sahip olduğu roman sayısı: ' +
+                            AppLocalization.getLabels.countLast2005comic +
                                 controller.comicBookListModel.data!.total!.toString(),
                             maxLines: 3,
                             style: s14W400Dark().copyWith(
@@ -125,7 +126,7 @@ class DetailView extends GetView<DetailViewModel> {
                             )),
                       ],
                       if (controller.comicBookListModel.data == null)
-                        Text('No Comicbooks',
+                        Text(AppLocalization.getLabels.noComics,
                             style: s14W400Dark().copyWith(
                               color: AppColor.white,
                             )),

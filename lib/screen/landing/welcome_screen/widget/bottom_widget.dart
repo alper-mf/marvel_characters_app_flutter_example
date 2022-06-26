@@ -32,7 +32,7 @@ class _BottomWidget extends GetView<WelcomeViewModel> {
           ),
           KPadding(),
           Text(
-            'With great power comes great responsibility.',
+            AppLocalization.getLabels.withGreatPower,
             textAlign: TextAlign.center,
             style: s16W700Dark().copyWith(color: AppColor.black),
           ),
@@ -40,7 +40,7 @@ class _BottomWidget extends GetView<WelcomeViewModel> {
           RoundedCustomButton(
             onTap: onTapButton ?? () => {},
             kHeight: SizeConfig.height * .085,
-            title: 'Enter The Earth 616',
+            title: AppLocalization.getLabels.enterTheEarth616,
             color: AppColor.marvelRed,
             borderRadius: radiusXXS,
           ),

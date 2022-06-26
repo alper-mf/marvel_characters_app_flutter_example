@@ -25,7 +25,7 @@ class SplashViewModel extends GetxController {
     try {
       future.whenComplete(
         () => Navigator.pushNamedAndRemoveUntil(
-            context, Screens.instance.main.homeScreen, (route) => false),
+            context, Screens.instance.main.welcomeScreen, (route) => false),
       );
     } catch (e) {
       debugPrint(e.toString());

@@ -1,6 +1,13 @@
 # Marvel Comics Heroes App
 
+
+https://user-images.githubusercontent.com/8598467/175837870-33823fb6-c381-4455-84dd-3ed5a859f0ad.mp4
+
+App Screenshots
 ![alt text](https://github.com/alper-mf/marvel_characters_app/blob/main/app_preview/screen_shot.png)
+
+
+https://user-images.githubusercontent.com/8598467/175837618-63af0d68-ba32-4017-9eba-2ea868062c73.mp4
 
 Endpoint bağlantısını sağlayabilmek için hashKey oluşturulması gerekmektedir. HashKey oluşturabilmek için; [developer.marvel.com](http://developer.marvel.com) adresinden privateKey ve publicKey oluşturup, daha sonra bu keyleri; [https://md5.cz](https://md5.cz) adresinden **timestampPrivatekeyPublickey** yan yana gelecek şekilde yapıştırıp, oluşan md5 hashKey i uygulamanızda kullanabilirsiniz. 
 

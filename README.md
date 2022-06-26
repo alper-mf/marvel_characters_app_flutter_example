@@ -6,6 +6,13 @@ Endpoint bağlantısını sağlayabilmek için hashKey oluşturulması gerekmekt
 
 Ya da hasKey oluşturmak için convertToMd5 eklentisini kullanabilirsiniz.
 
+PROJE Özellikleri:\
+[√] Proje ile ilgili TODO lar yerine getirildi.\
+[√] Uygulamada cihazın donanımsal özelliklerinden faydalanıldı. (Hoş geldin ekranında, cihazın gyro özelliğinden faydanılarak Spider-Man hareket ettirildi.)\
+[√] Uygulama için geliştirme ortamı (Flavor) kuruldu.\
+[√] App Localization yapıldı. Cihazın diline göre uygulama dili otomatik seçiliyor.\
+[√] Tema kuruldu.\
+
 TODO:\
 [√] Ana sayfada karakterler listelenmeli. (Karakter adı ve fotoğrafı).\
 [√] İlk açılışta 30 ve scroll sayfa sonuna ulaştığında sonraki sayfa içeriği gelmeli.\

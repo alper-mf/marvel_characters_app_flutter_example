@@ -22,6 +22,8 @@ class HomeViewModel extends GetxController with GetTickerProviderStateMixin {
 
   final RxInt listCount = 0.obs;
 
+  int offset = 0;
+
   HomeViewModel() {
     _characterResponse = CharactersResponseModel().obs;
     _loadingStatus = LoadingStatus.init.obs;
@@ -86,9 +88,12 @@ class HomeViewModel extends GetxController with GetTickerProviderStateMixin {
 
   ///Karakter listesinin çekildiği method.
   Future<void> _getCharacterLists() async {
-    final param = {
-      "limit": "${(listCount + AppConstants.loadMoreLenght)}",
-    };
+    final limit = listCount + AppConstants.loadMoreLenght;
+    if (limit > 100) {
+      offset = (offset + 100);
+      listCount.value = 30;
+    }
+    final param = {"limit": "$limit", "offset": "$offset"};
     try {
       final response = await ApiManager().getCharacterList(param);
       if (response.status == BaseModelStatus.ok) {

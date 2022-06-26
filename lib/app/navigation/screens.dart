@@ -1,4 +1,5 @@
 import 'dart:developer';
+import 'package:dop_flutter_base_project/screen/detail_screen/detail_screen.dart';
 import 'package:dop_flutter_base_project/screen/home_screen/home_screen.dart';
 import 'package:dop_flutter_base_project/screen/landing/welcome_screen/welcome_screen.dart';
 import 'package:get/get.dart';
@@ -33,6 +34,7 @@ class _MainScreens with PageNavigation {
   final String init = '/';
   final String welcomeScreen = _getMainScreenName('welcomeScreen');
   final String homeScreen = _getMainScreenName('homeScreen');
+  final String detailScreen = _getMainScreenName('detailScreen');
 
   Route<dynamic>? onGenerateRoute(RouteSettings setting) {
     if (setting.name == init) {
@@ -41,6 +43,9 @@ class _MainScreens with PageNavigation {
       return goToPage(WelcomeScreen(), setting);
     } else if (setting.name == homeScreen) {
       return goToPage(HomeScreen(), setting);
+    } else if (setting.name == detailScreen) {
+      var argument = setting.arguments as int;
+      return goToPage(DetailScreen(characterId: argument), setting);
     } else {
       return returnUnknownPageRoute(setting);
     }

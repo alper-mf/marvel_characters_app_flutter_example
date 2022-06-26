@@ -11,9 +11,9 @@ class AppLightTheme implements AppTheme {
   @override
   Brightness brightness = Brightness.light;
   @override
-  Color backgroundColor = AppColor.background;
+  Color backgroundColor = AppColor.white;
   @override
-  Color scaffoldBackgroundColor = AppColor.background;
+  Color scaffoldBackgroundColor = AppColor.white;
   @override
   IconThemeData accentIconTheme = const IconThemeData(color: Colors.white);
   @override
@@ -21,7 +21,7 @@ class AppLightTheme implements AppTheme {
   @override
   IconThemeData iconTheme = const IconThemeData(color: Colors.black);
   @override
-  Color cardColor = AppColor.background;
+  Color cardColor = AppColor.white;
   @override
   Color bottomAppBarColor = Colors.white;
   @override
@@ -39,7 +39,7 @@ class AppLightTheme implements AppTheme {
     secondaryContainer: AppColor.darkText,
     surface: Colors.white,
     onSurface: AppColor.darkText,
-    background: AppColor.background,
+    background: AppColor.white,
     onBackground: AppColor.darkText,
     error: Colors.red,
     onError: Colors.white,

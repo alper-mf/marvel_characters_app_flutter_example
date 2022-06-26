@@ -2,15 +2,8 @@ import 'dart:async';
 import 'dart:math';
 import 'dart:ui';
 
-import 'package:dop_flutter_base_project/app/components/buttons/rounded_custom_button.dart';
-import 'package:dop_flutter_base_project/app/components/other_widgets/padding.dart';
-import 'package:dop_flutter_base_project/app/constants/app/padding_and_radius.dart';
-import 'package:dop_flutter_base_project/app/constants/assets/assets_image.dart';
-import 'package:dop_flutter_base_project/app/navigation/size_config.dart';
-import 'package:dop_flutter_base_project/app/theme/colors.dart';
-import 'package:dop_flutter_base_project/app/theme/text_style.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
+
 import 'package:sensors_plus/sensors_plus.dart' as sensors;
 
 class ParallaxBG extends StatefulWidget {

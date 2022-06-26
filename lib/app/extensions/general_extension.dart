@@ -13,7 +13,7 @@ extension GetXExtension on GetInterface {
 }
 
 extension StringExtension on String {
-  String converToMd5() {
+  String convertToMd5() {
     return md5.convert(utf8.encode(this)).toString();
   }
 }

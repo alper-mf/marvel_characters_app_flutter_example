@@ -1,5 +1,7 @@
 # Marvel Comics Heroes App
 
+![alt text](https://github.com/alper-mf/marvel_characters_app/blob/main/app_preview/screen_shot.png)
+
 Endpoint bağlantısını sağlayabilmek için hashKey oluşturulması gerekmektedir. HashKey oluşturabilmek için; [developer.marvel.com](http://developer.marvel.com) adresinden privateKey ve publicKey oluşturup, daha sonra bu keyleri; [https://md5.cz](https://md5.cz) adresinden **timestampPrivatekeyPublickey** yan yana gelecek şekilde yapıştırıp, oluşan md5 hashKey i uygulamanızda kullanabilirsiniz. 
 
 Ya da hasKey oluşturmak için convertToMd5 eklentisini kullanabilirsiniz.
@@ -15,4 +17,4 @@ TODO:
 [√] Çizgi romanlar yeniden eskiye doğru sıralanmalı.\
 [X] Unit Test\
 [X] Snapshot Test\
- 
+

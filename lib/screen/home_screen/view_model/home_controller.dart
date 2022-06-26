@@ -44,7 +44,7 @@ class HomeViewModel extends GetxController {
     _init();
   }
 
-  ///Init işlemlerinin yapıldı method.
+  ///Init işlemlerinin yapıldığı method.
   _init() async {
     try {
       loadingStatus = LoadingStatus.loading;
@@ -66,23 +66,25 @@ class HomeViewModel extends GetxController {
   }
 
   ///Liste için kullanılan listener.
-  void _scrollListener() {
+  Future<void> _scrollListener() async {
     print(scrollController.position.extentAfter);
     if (scrollController.position.pixels == scrollController.position.maxScrollExtent) {
-      items.addAll(List.generate(10, (index) => 'Inserted $index'));
+      LoadingProgress.showLoading(context);
+      await _getCharacterLists();
+      print('----------->' + characterResponseModel.data!.results!.length.toString());
+      LoadingProgress.done(context);
     }
   }
 
   ///Karakter listesinin çekildiği method.
   Future<void> _getCharacterLists() async {
     final param = {
-      "limit": listCount + AppConstants.loadMoreLenght,
+      "limit": "${(listCount + AppConstants.loadMoreLenght)}",
     };
     try {
-      final response = await ApiManager().getCharacterLists(param);
+      final response = await ApiManager().getList(param);
       if (response.status == BaseModelStatus.ok) {
         characterResponseModel = response.data!;
-        print('character List --> ' + characterResponseModel.toJson().toString());
       } else if (response.status == BaseModelStatus.error) {
         showToastMessage(context, textMessage: response.data.toString());
         characterResponseModel = CharactersResponseModel();

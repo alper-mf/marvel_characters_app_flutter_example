@@ -12,6 +12,9 @@ class AppConstants {
   ///Marvel API -> Public KEY
   final publicKey = dotenv.env['publicKey'];
 
+  ///Marvel API -> Public KEY
+  final privateKey = dotenv.env['privateKey'];
+
   /// Tasarım Genişlik
   static const double designWith = 375;
 

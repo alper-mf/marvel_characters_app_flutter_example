@@ -13,10 +13,10 @@ class HttpUrl {
 
   ///Path de kullanılacak method.
   String pathBody({required String apiKey, required String hash}) =>
-      'apikey=$apiKey&ts=1&hash=$hash';
+      'apikey=$apiKey&ts=${DateTime.now()}&hash=$hash';
 
   /// --> v1/public/characters
-  static const characters = 'v1/public/characters';
+  static const characters = 'v1/public/characters/';
 
   /// GET (for get new token)
   static const String getToken = '';

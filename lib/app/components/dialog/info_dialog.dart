@@ -47,7 +47,7 @@ class InfoDialog extends StatelessWidget {
               RoundedCustomButton(
                 kHeight: SizeConfig.height * .069,
                 onTap: () => Navigator.pop(context),
-                color: AppColor.primary,
+                color: AppColor.marvelRed,
                 borderRadius: 6,
                 isOutlined: true,
                 widget: Text(
@@ -58,11 +58,11 @@ class InfoDialog extends StatelessWidget {
             RoundedCustomButton(
               kHeight: SizeConfig.height * .069,
               onTap: onTap ?? () => Navigator.pop(context),
-              color: AppColor.disabledButtonColor,
+              color: AppColor.marvelRed,
               borderRadius: 6,
               widget: Text(
                 onTap == null ? 'Tamam' : btnText ?? 'Devam Et',
-                style: s14W400Dark(),
+                style: s14W400Dark().copyWith(color: AppColor.background),
               ),
             ),
           ],

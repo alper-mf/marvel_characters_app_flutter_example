@@ -50,7 +50,7 @@ class RoundedCustomButton extends StatelessWidget {
                     color: color == null
                         ? AppColor.primary
                         : isDisabled != null && isDisabled == true
-                            ? AppColor.disabledButtonColor
+                            ? AppColor.marvelRed
                             : isOutlined != null && isOutlined == true
                                 ? AppColor.darkText
                                 : color!,

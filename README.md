@@ -1,6 +1,6 @@
 # Marvel Comics Heroes App
 
-https://user-images.githubusercontent.com/8598467/175837618-63af0d68-ba32-4017-9eba-2ea868062c73.mp4
+https://user-images.githubusercontent.com/8598467/175837870-33823fb6-c381-4455-84dd-3ed5a859f0ad.mp4 https://user-images.githubusercontent.com/8598467/175837618-63af0d68-ba32-4017-9eba-2ea868062c73.mp4
 
 ![alt text](https://github.com/alper-mf/marvel_characters_app/blob/main/app_preview/screen_shot.png)
 

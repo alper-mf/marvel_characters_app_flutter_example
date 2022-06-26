@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:dop_flutter_base_project/app/constants/app/app_constant.dart';
 import 'package:dop_flutter_base_project/app/constants/app/http_url.dart';
 import 'package:dop_flutter_base_project/app/constants/enum/general_enum.dart';
@@ -5,6 +7,7 @@ import 'package:dop_flutter_base_project/app/constants/enum/loading_status_enum.
 import 'package:dop_flutter_base_project/app/extensions/general_extension.dart';
 import 'package:dop_flutter_base_project/app/model/base_http_model.dart';
 import 'package:dop_flutter_base_project/app/model/response/characters_response.dart';
+import 'package:dop_flutter_base_project/app/model/response/comic_books_list_model.dart';
 import 'package:dop_flutter_base_project/core/exception/http_error_exception.dart';
 import 'package:dop_flutter_base_project/core/services/http_client.dart';
 import 'package:get/get.dart';
@@ -28,12 +31,6 @@ class ApiManager extends SessionHeaderModel {
   ///Marvel karakter listesini getirir.
   Future<BaseHttpModel<CharactersResponseModel>> getCharacterList(
       [Map<String, dynamic>? param]) async {
-    final Map<String, dynamic> defaultParams = {
-      "apikey": "${AppConstants().publicKey}",
-      "hash": "${AppConstants().hash}",
-      "ts": "1"
-    };
-
     if (param != null && param.isNotEmpty) {
       defaultParams.addAll(param);
     }
@@ -83,16 +80,19 @@ class ApiManager extends SessionHeaderModel {
   }
 
   ///Marvel karakterine ait romanlar çekilir.
-  Future<BaseHttpModel<CharactersResponseModel>> getCharacterComics(int characterId) async {
+  Future<BaseHttpModel<ComicBooksListModel>> getCharacterComics(
+      int characterId, Map<String, dynamic>? param) async {
+    if (param != null && param.isNotEmpty) {
+      defaultParams.addAll(param);
+    }
     try {
       var response = await HttpClient().request(
           HttpMethod.get, HttpUrl().characterComics(characterId: characterId),
           headerParam: createHeader(), bodyParam: defaultParams);
 
       if (response!.statusCode == HttpStatus.ok) {
-        final responseModel = await CharactersResponseModel().backgroundJsonParser(response.body);
-        return BaseHttpModel<CharactersResponseModel>(
-            status: BaseModelStatus.ok, data: responseModel);
+        final responseModel = await ComicBooksListModel().jsonParser(response.body);
+        return BaseHttpModel<ComicBooksListModel>(status: BaseModelStatus.ok, data: responseModel);
       } else if (response.statusCode == HttpStatus.notFound) {
         return BaseHttpModel(status: BaseModelStatus.notFound);
       } else {

@@ -37,6 +37,7 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
       leadingWidth: leadingWidth,
       key: appBarKey,
       elevation: elevation,
+      centerTitle: false,
       leading: actionLeading,
       backgroundColor: backgroundColor,
       title: title != null

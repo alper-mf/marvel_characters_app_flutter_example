@@ -4,6 +4,7 @@ import 'package:dop_flutter_base_project/app/components/dialog/loading_progress.
 import 'package:dop_flutter_base_project/app/components/dialog/my_simple_dialog.dart';
 import 'package:dop_flutter_base_project/app/components/message/toast_message.dart';
 import 'package:dop_flutter_base_project/app/model/response/characters_response.dart';
+import 'package:dop_flutter_base_project/app/model/response/comic_books_list_model.dart';
 import 'package:dop_flutter_base_project/core/i10n/i10n.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -15,9 +16,11 @@ class DetailViewModel extends GetxController {
   late final int characterId;
   late Rx<LoadingStatus> _loadingStatus;
   late Rx<CharactersResponseModel> _characterResponse;
+  late Rx<ComicBooksListModel> _comicBookListModel;
 
   DetailViewModel(int id) {
     _characterResponse = CharactersResponseModel().obs;
+    _comicBookListModel = ComicBooksListModel().obs;
     this.characterId = id;
     _loadingStatus = LoadingStatus.init.obs;
     print(id);
@@ -34,6 +37,12 @@ class DetailViewModel extends GetxController {
   CharactersResponseModel get characterResponse => _characterResponse.value;
   set characterResponse(CharactersResponseModel val) {
     _characterResponse.value = val;
+  }
+
+  ///Karakter listesinin bulunduğu model.
+  ComicBooksListModel get comicBookListModel => _comicBookListModel.value;
+  set comicBookListModel(ComicBooksListModel val) {
+    _comicBookListModel.value = val;
   }
 
   @override
@@ -84,11 +93,13 @@ class DetailViewModel extends GetxController {
   Future<void> _getCharacterComics() async {
     final param = {
       "limit": "10",
+      "startYear": "2005",
+      "orderBy": "-onsaleDate",
     };
     try {
-      final response = await ApiManager().getCharacterComics(characterId);
+      final response = await ApiManager().getCharacterComics(characterId, param);
       if (response.status == BaseModelStatus.ok) {
-        //   characterResponseModel = response.data!;
+        _comicBookListModel.value = response.data!;
       } else if (response.status == BaseModelStatus.error) {
         showToastMessage(context, textMessage: response.data.toString());
         // characterResponseModel = CharactersResponseModel();

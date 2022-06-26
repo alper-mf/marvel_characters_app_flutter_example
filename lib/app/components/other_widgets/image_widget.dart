@@ -4,17 +4,19 @@ import 'package:flutter/material.dart';
 class ImageWidget extends StatelessWidget {
   const ImageWidget({
     Key? key,
-    required this.thumbnail,
+    required this.path,
+    required this.extension,
     this.boxFit,
   }) : super(key: key);
 
-  final Thumbnail? thumbnail;
+  final String? path;
+  final String? extension;
   final BoxFit? boxFit;
 
   @override
   Widget build(BuildContext context) {
     return Image.network(
-      '${thumbnail!.path}.${thumbnail!.extension}',
+      '${path}.${extension}',
       fit: boxFit,
     );
   }

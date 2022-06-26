@@ -17,7 +17,7 @@ abstract class IHttpClient {
     String pathBody = '',
   }) async {
     if (pathBody != '') pathBody = pathBody;
-    final uri = Uri.https(baseUrl, method + '?' + pathBody, bodyParam);
+    final uri = Uri.https(baseUrl, method + pathBody, bodyParam);
     print('URI --->' + uri.toString());
     final response = await http.get(uri, headers: headerParam);
     return response;

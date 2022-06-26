@@ -16,7 +16,7 @@ class HttpUrl {
       'apikey=$apiKey&ts=${DateTime.now()}&hash=$hash';
 
   /// --> v1/public/characters (Karakter listesini getirir.)
-  static const characters = 'v1/public/characters/';
+  static const characters = 'v1/public/characters';
 
   /// --> /v1/public/characters/{characterId}/ (Karakter detayını getirir.)
   String characterDetail({required int characterId}) => 'v1/public/characters/$characterId';

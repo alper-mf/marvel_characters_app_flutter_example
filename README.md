@@ -6,7 +6,7 @@ Endpoint bağlantısını sağlayabilmek için hashKey oluşturulması gerekmekt
 
 Ya da hasKey oluşturmak için convertToMd5 eklentisini kullanabilirsiniz.
 
-TODO:
+TODO:\
 [√] Ana sayfada karakterler listelenmeli. (Karakter adı ve fotoğrafı).\
 [√] İlk açılışta 30 ve scroll sayfa sonuna ulaştığında sonraki sayfa içeriği gelmeli.\
 [√] Her sonraki sayfada 30 adet olacak şekilde ilerlemeli.\
@@ -16,5 +16,5 @@ TODO:
 [√] Son 10 çizgi roman ile limitlenmeli.\
 [√] Çizgi romanlar yeniden eskiye doğru sıralanmalı.\
 [X] Unit Test\
-[X] Snapshot Test\
+[X] Snapshot Test
 

@@ -6,11 +6,12 @@ class AppColor {
   AppColor._();
 
   static const Color black = Colors.black;
+  static const Color dark = Color(0xff1f1f2b);
   static const Color transparent = Colors.transparent;
   static const Color darkText = Color.fromARGB(255, 26, 26, 26);
   static const Color paleTextColor = Color(0xff9e9e9e);
   static const Color grey = Color(0xff666666);
-  static const Color background = Color(0xffF1F2F4);
+  static const Color white = Color(0xffF1F2F4);
   static const Color primary = Color(0xff344c98);
   static const Color primaryContainer = Color(0xff415AA8);
   static const Color lightBlue = Color(0xffccdafb);

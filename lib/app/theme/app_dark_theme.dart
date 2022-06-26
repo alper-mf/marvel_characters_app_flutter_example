@@ -36,7 +36,7 @@ class AppDarkTheme implements AppTheme {
     secondary: Colors.white,
     secondaryContainer: Colors.white,
     surface: AppColor.cardColor,
-    background: AppColor.background,
+    background: AppColor.white,
     error: Colors.red,
     onPrimary: Colors.white,
     onSecondary: AppColor.darkText,

@@ -13,9 +13,9 @@ class _BottomWidget extends GetView<WelcomeViewModel> {
       decoration: BoxDecoration(
         gradient: LinearGradient(
           colors: [
-            AppColor.background.withOpacity(0),
-            AppColor.background.withOpacity(0.9),
-            AppColor.background,
+            AppColor.white.withOpacity(0),
+            AppColor.white.withOpacity(0.9),
+            AppColor.white,
           ],
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,

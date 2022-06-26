@@ -2,18 +2,12 @@ import 'package:dop_flutter_base_project/app/components/message/error_message_di
 import 'package:dop_flutter_base_project/app/extensions/context_extension.dart';
 import 'package:dop_flutter_base_project/app/navigation/screens.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+
 import 'package:get/get.dart';
 import '../../../../core/i10n/i10n.dart';
 
 class SplashViewModel extends GetxController {
   final GlobalKey scaffoldKey = GlobalKey();
-
-  @override
-  void onInit() {
-    super.onInit();
-    SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
-  }
 
   @override
   void onReady() {

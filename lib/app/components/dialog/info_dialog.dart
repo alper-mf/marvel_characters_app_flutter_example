@@ -62,7 +62,7 @@ class InfoDialog extends StatelessWidget {
               borderRadius: 6,
               widget: Text(
                 onTap == null ? 'Tamam' : btnText ?? 'Devam Et',
-                style: s14W400Dark().copyWith(color: AppColor.background),
+                style: s14W400Dark().copyWith(color: AppColor.white),
               ),
             ),
           ],

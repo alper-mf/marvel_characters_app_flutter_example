@@ -15,8 +15,14 @@ class HttpUrl {
   String pathBody({required String apiKey, required String hash}) =>
       'apikey=$apiKey&ts=${DateTime.now()}&hash=$hash';
 
-  /// --> v1/public/characters
+  /// --> v1/public/characters (Karakter listesini getirir.)
   static const characters = 'v1/public/characters/';
+
+  /// --> /v1/public/characters/{characterId}/ (Karakter detayını getirir.)
+  String characterDetail({required int characterId}) => 'v1/public/characters/$characterId';
+
+  /// --> /v1/public/characters/{characterId}/comics (Karaktere ait comics bookslar getirir.)
+  String characterComics({required int characterId}) => 'v1/public/characters/$characterId/comics';
 
   /// GET (for get new token)
   static const String getToken = '';
